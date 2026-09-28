@@ -58,7 +58,7 @@ button{font-family:inherit}
 .mmenu .btn{margin-top:10px}
 
 /* ---------- Portada ---------- */
-.hero{color:var(--ink);background-repeat:no-repeat;background-position:right center;background-size:contain;background-color:#F4F2ED}
+.hero{color:var(--ink);background-color:#F4F2ED;background-repeat:no-repeat,no-repeat;background-position:left top,right center;background-size:100% 100%,cover;background-image:linear-gradient(100deg, rgba(244,242,237,.98) 0%, rgba(244,242,237,.94) 32%, rgba(244,242,237,.6) 55%, rgba(244,242,237,.05) 80%), var(--hero-photo, none)}
 .hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:32px;padding-top:36px;padding-bottom:40px;min-height:460px}
 .hero-copy{flex:1 1 480px;max-width:560px;display:flex;flex-direction:column;gap:20px;min-width:0}
 h1{font-family:var(--bsd);font-weight:900;font-size:clamp(42px,6.4vw,92px);line-height:.94}
@@ -240,8 +240,8 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   .nav .link,.nav .btn-outline{display:none}
   .burger{display:inline-flex}
   .tile,.t7,.t5{grid-column:span 12}
-  .hero{background-position:center bottom;background-size:auto 220px}
-  .hero .wrap{min-height:0;padding-bottom:260px}
+  .hero{background-image:linear-gradient(190deg, rgba(244,242,237,.98) 0%, rgba(244,242,237,.96) 40%, rgba(244,242,237,.55) 62%, rgba(244,242,237,.1) 85%), var(--hero-photo, none);background-position:left top,center bottom;background-size:100% 100%,contain}
+  .hero .wrap{min-height:0;padding-bottom:300px}
   .hero-copy{max-width:none}
 }
 @media (max-width:640px){
@@ -253,9 +253,7 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   .brand b{font-size:22px}
   .brand small{display:none}
   .nav .btn{min-height:44px;padding:0 16px;font-size:15px}
-  .hero .wrap{padding-top:32px;padding-bottom:40px;gap:28px}
-  .hero{background-size:auto 170px}
-  .hero .wrap{padding-bottom:200px}
+  .hero .wrap{padding-top:32px;padding-bottom:260px;gap:28px;min-height:0}
   .hero-cta .btn{flex:1 1 100%}
   .road{height:138px}
   .drive .veh{width:calc(var(--w) * .68)}
@@ -643,7 +641,7 @@ footer small{display:block;font-size:14px;color:var(--muted)}
 
   $$('img[data-logo]').forEach(function (i) { i.src = LOGO; });
   var heroSectionEl = document.getElementById('inicio');
-  if (heroSectionEl) heroSectionEl.style.backgroundImage = 'url(' + HERO_BG + ')';
+  if (heroSectionEl) heroSectionEl.style.setProperty('--hero-photo', 'url(' + HERO_BG + ')');
 
   /* ===== WhatsApp (abre la app en el celular) ===== */
   function waUrl(text) { return 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(text); }
