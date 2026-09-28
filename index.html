@@ -86,8 +86,8 @@ h1{font-family:var(--bsd);font-weight:900;font-size:clamp(42px,6.4vw,92px);line-
 .spin-arrive{animation:spin .45s linear 4}
 
 /* ---------- Módulos de color (encajados sobre fondo blanco) ---------- */
-.servicios,.cob,.cot,.pasos,.seguridad{max-width:1320px;margin:0 auto 32px;border-radius:28px;overflow:hidden}
-.servicios .wrap,.cob .wrap,.cot .wrap,.pasos .wrap,.seguridad .wrap{padding:48px var(--pad)}
+.servicios,.cob,.seguridad{max-width:1320px;margin:0 auto 32px;border-radius:28px;overflow:hidden}
+.servicios .wrap,.cob .wrap,.seguridad .wrap{padding:48px var(--pad)}
 
 /* ---------- Servicios ---------- */
 .servicios{background:#fff;color:var(--ink);border:2px solid #EEE3D2;box-shadow:0 8px 28px rgba(14,11,9,.06)}
@@ -116,7 +116,7 @@ h1{font-family:var(--bsd);font-weight:900;font-size:clamp(42px,6.4vw,92px);line-
 .route-dash{stroke-dasharray:12 10;animation:dashmove 1s linear infinite}
 
 /* ---------- Cobertura ---------- */
-.cob{background:var(--ember);color:var(--ink)}
+.cob{background:#fff;color:var(--ink);border:2px solid #EEE3D2;box-shadow:0 8px 28px rgba(14,11,9,.06)}
 .wh-card{margin-top:24px;background:var(--ink);color:var(--bone);border:3px solid var(--gold);border-radius:16px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
 .wh-top{display:flex;flex-direction:column;gap:14px;min-width:0}
 .wh-top-head{display:flex;align-items:center;gap:16px}
@@ -158,35 +158,23 @@ h1{font-family:var(--bsd);font-weight:900;font-size:clamp(42px,6.4vw,92px);line-
 .zones span{background:var(--ink);color:var(--bone);padding:16px 28px;border-radius:999px;font-size:20px;font-weight:700}
 .cob .txt .zones{flex:none;align-self:flex-start;margin-top:4px}
 
+.cob-scene{flex:1 1 340px;min-width:280px;max-width:420px;align-self:stretch;display:flex}
+.cob-scene-wrap{flex:1 1 auto;background:#0E0B09;border-radius:16px;border:3px solid var(--gold);padding:10px;display:flex;align-items:center;box-shadow:0 10px 30px rgba(14,11,9,.18)}
+.cob-scene-wrap svg{width:100%;height:auto;display:block}
+.cob-pkg-a{offset-path:path('M80 108 Q 140 96 172 116');offset-rotate:0deg;animation:cobPkg 2.6s linear infinite}
+@keyframes cobPkg{0%{offset-distance:0%;opacity:0}8%{opacity:1}88%{opacity:1}100%{offset-distance:100%;opacity:0}}
+@media (prefers-reduced-motion:reduce){.cob-pkg-a{animation:none !important}}
+@media (max-width:900px){.cob-scene{max-width:none}}
+
 .trk-err{background:#fff;border:2px solid var(--ember);border-radius:8px;padding:12px 14px;font-size:15px;color:var(--ink);font-weight:600}
 .linkbtn{background:none;border:0;padding:8px 0;font-size:16px;font-weight:700;color:var(--ink);text-decoration:underline;cursor:pointer;text-align:left}
 
-/* ---------- Cotizar ---------- */
-.cot{background:var(--gold);color:var(--ink)}
-.cot .wrap{display:flex;flex-wrap:wrap;gap:32px}
-.cot-copy{flex:1 1 380px;display:flex;flex-direction:column;gap:26px;min-width:0}
-.cot-copy .lead{color:#2A1F10;max-width:460px}
-.contact{display:flex;flex-direction:column;gap:16px;font-size:18px}
-.contact dt{font-size:14px;color:#3A2A10}
-.contact dd{font-weight:700}
-.panel{flex:1 1 480px;min-width:0;background:#fff;border-radius:14px;border-top:8px solid var(--ink);padding:26px;display:flex;flex-direction:column;gap:16px}
+/* ---------- Campos de formulario (usado por panel admin) ---------- */
 .row2{display:flex;flex-wrap:wrap;gap:20px}
 .field{flex:1 1 200px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .field label,.fl{font-size:15px;font-weight:700}
 .field input,.field textarea{width:100%;min-height:48px;padding:12px 14px;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:2px solid #B9AE9C;border-radius:8px}
 .field textarea{resize:vertical}
-.chips-f{display:flex;flex-wrap:wrap;gap:10px}
-.chip{min-height:44px;padding:0 18px;font-weight:700;font-size:15px;border-radius:999px;border:2px solid #B9AE9C;background:#fff;color:var(--ink);cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--gold);border-color:var(--ink)}
-
-/* ---------- Cómo funciona (3 pasos) ---------- */
-.pasos{background:#fff;color:var(--ink);border:2px solid #EEE3D2;box-shadow:0 8px 28px rgba(14,11,9,.06)}
-.pasos .lead{color:#2A1F10}
-.pasos-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.paso-card{background:var(--cream);border:2px solid #EEE3D2;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px}
-.paso-card .n{flex:none;width:52px;height:52px;border-radius:50%;background:var(--ink);color:var(--gold);display:grid;place-items:center;font-family:var(--bsd);font-weight:900;font-size:26px}
-.paso-card h3{font-family:var(--bsd);font-weight:900;font-size:24px;line-height:1.05}
-.paso-card p{font-size:15.5px;line-height:1.6;color:#3A3026}
 
 /* ---------- Tarifas transparentes ---------- */
 .tarifas{background:var(--cream);color:var(--ink)}
@@ -217,11 +205,13 @@ footer .id{display:flex;align-items:center;gap:14px}
 footer img{width:48px;height:48px;object-fit:contain}
 footer strong{font-size:17px}
 footer small{display:block;font-size:14px;color:var(--muted)}
-.fab{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;width:64px;height:64px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 6px 20px rgba(0,0,0,.5);transition:width .2s,border-radius .2s,padding .2s}
-.fab-text{display:none}
+.fab{position:fixed;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;width:auto;height:auto;padding:14px 22px 14px 16px;border-radius:999px;background:#25D366;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+.fab svg{flex:none;width:30px;height:30px}
+.fab-text{display:block;color:#fff;font-weight:800;font-size:14px;line-height:1.15;white-space:normal;max-width:150px;font-family:var(--sans)}
 @media (min-width:901px){
-  .fab{width:auto;height:auto;padding:16px 26px 16px 18px;border-radius:999px}
-  .fab-text{display:block;color:#fff;font-weight:800;font-size:16px;white-space:nowrap;font-family:var(--sans)}
+  .fab{padding:16px 26px 16px 18px}
+  .fab svg{width:36px;height:36px}
+  .fab-text{font-size:16px;white-space:nowrap;max-width:none}
 }
 
 
@@ -281,7 +271,7 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   .nav .link,.nav .btn-outline,.nav .btn-ember{display:none}
   .burger{display:none}
   .tile,.t7,.t5{grid-column:span 12}
-  .pasos-grid,.tarifas-grid,.seguridad-grid{grid-template-columns:1fr}
+  .tarifas-grid,.seguridad-grid{grid-template-columns:1fr}
   .tabbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--ink);border-top:3px solid var(--gold);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));gap:2px;box-shadow:0 -8px 24px rgba(0,0,0,.35)}
   footer{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}
   .fab{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
@@ -306,9 +296,13 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   .tile{padding:24px}.tile h3{font-size:34px}
   .step .n{width:42px;height:42px;font-size:24px}
   .zones span{font-size:17px;padding:12px 20px}
-  .panel{padding:22px}
-  .panel .btn{width:100%}
-  .fab{width:58px;height:58px}
+  .fab{padding:12px 18px 12px 14px}
+  .fab svg{width:26px;height:26px}
+  .fab-text{font-size:13px;max-width:130px}
+}
+@media (max-width:360px){
+  .tab{font-size:9.5px;padding:6px 2px;gap:2px}
+  .tab svg{width:19px;height:19px}
 }
 @media (max-width:767px){
   .hero{background-image:none;background-color:#fff}
@@ -329,48 +323,54 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   <div class="in">
     <button type="button" class="brand" id="tapBrand" aria-label="Dos Espartanos, ir al inicio" data-scroll="inicio">
       <img data-logo alt="" width="56" height="56">
-      <span><b>Dos Espartanos</b><small>Operador Logístico E.I.R.L.</small></span>
+      <span><b>2E LOGISTIC</b><small>Dos Espartanos Operador Logístico E.I.R.L.</small></span>
     </button>
     <nav class="nav" aria-label="Principal">
-      <button type="button" class="link" data-scroll="servicios">Fulfillment</button>
-      <button type="button" class="link" data-scroll="logistica">Logística</button>
+      <button type="button" class="link" data-scroll="inicio">Inicio</button>
+      <button type="button" class="link" data-scroll="logistica">Así funciona</button>
       <button type="button" class="link" data-scroll="tarifas">Tarifas</button>
+      <button type="button" class="link" data-scroll="servicios">Servicios</button>
       <button type="button" class="link" data-scroll="cobertura">Cobertura</button>
-      <button type="button" class="btn btn-ember" data-scroll="cotizar">Cotizar envío</button>
+      <button type="button" class="link" data-scroll="seguridad">Seguridad y confianza</button>
       <button type="button" class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mmenu">
         <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
       </button>
     </nav>
   </div>
   <div class="mmenu" id="mmenu">
-    <button type="button" class="link" data-scroll="servicios">Fulfillment</button>
-    <button type="button" class="link" data-scroll="logistica">Logística</button>
+    <button type="button" class="link" data-scroll="inicio">Inicio</button>
+    <button type="button" class="link" data-scroll="logistica">Así funciona</button>
     <button type="button" class="link" data-scroll="tarifas">Tarifas</button>
+    <button type="button" class="link" data-scroll="servicios">Servicios</button>
     <button type="button" class="link" data-scroll="cobertura">Cobertura</button>
-    <button type="button" class="btn btn-ember" data-scroll="cotizar">Cotizar envío</button>
+    <button type="button" class="link" data-scroll="seguridad">Seguridad y confianza</button>
   </div>
 </header>
 
 <nav class="tabbar" id="tabbar" aria-label="Navegación principal">
   <button type="button" class="tab" data-scroll="inicio" data-tab="inicio">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 9.5V20h13V9.5"></path></svg>
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 9.5V20h13V9.5"></path><path d="M9.5 20v-6h5v6"></path></svg>
     <span>Inicio</span>
   </button>
-  <button type="button" class="tab" data-scroll="servicios" data-tab="servicios">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8l9 5 9-5Z"></path><path d="M3 8v8l9 5 9-5V8"></path><path d="M12 13v8"></path></svg>
-    <span>Servicios</span>
+  <button type="button" class="tab" data-scroll="logistica" data-tab="logistica">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.4"></circle><circle cx="12" cy="18" r="2.4"></circle><circle cx="18" cy="6" r="2.4"></circle><path d="M8.1 7.1 10 15.5M15.9 7.1 14 15.5"></path></svg>
+    <span>Así funciona</span>
   </button>
   <button type="button" class="tab" data-scroll="tarifas" data-tab="tarifas">
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 12.3 12.7 20.2a2 2 0 0 1-2.8 0l-6.1-6.1a2 2 0 0 1 0-2.8L11.7 3.4 20.6 3.4 20.6 12.3Z"></path><circle cx="16" cy="8" r="1.6"></circle></svg>
     <span>Tarifas</span>
   </button>
+  <button type="button" class="tab" data-scroll="servicios" data-tab="servicios">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8l9 5 9-5Z"></path><path d="M3 8v8l9 5 9-5V8"></path><path d="M12 13v8"></path></svg>
+    <span>Servicios</span>
+  </button>
   <button type="button" class="tab" data-scroll="cobertura" data-tab="cobertura">
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
     <span>Cobertura</span>
   </button>
-  <button type="button" class="tab" data-scroll="cotizar" data-tab="cotizar">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 8.6 8.6 0 0 1-3.7-.8L3 20l1-5.2a8.4 8.4 0 0 1-.9-3.8A8.4 8.4 0 0 1 12 2.6a8.4 8.4 0 0 1 9 8.9Z"></path></svg>
-    <span>Cotizar</span>
+  <button type="button" class="tab" data-scroll="seguridad" data-tab="seguridad">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.6 3 8.4 7 10 4-1.6 7-5.4 7-10V6l-7-3Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+    <span>Seguridad</span>
   </button>
 </nav>
 
@@ -394,28 +394,46 @@ footer small{display:block;font-size:14px;color:var(--muted)}
 <!-- CARRETERA -->
 <div class="road" id="road" aria-hidden="true"><div class="roadline"></div></div>
 
-<!-- CÓMO FUNCIONA (3 PASOS) -->
-<section class="pasos" id="como-funciona">
+<!-- LOGÍSTICA INTELIGENTE -->
+<section class="logi" id="logistica">
   <div class="wrap">
     <div class="head">
-      <h2 class="h2">¿Cómo funciona nuestro Fulfillment?</h2>
-      <p class="lead">En tres pasos simples, tu mercadería pasa de tu almacén a la puerta de tu cliente.</p>
+      <h2 class="h2">Así funciona tu fulfillment, paso a paso</h2>
+      <p class="lead">Desde que tu mercadería entra a nuestro almacén hasta que llega a la puerta del cliente, coordinamos cada etapa.</p>
     </div>
-    <div class="pasos-grid">
-      <div class="paso-card">
-        <span class="n">1</span>
-        <h3>Envías tu Stock</h3>
-        <p>Nos envías tus productos en volumen una sola vez a nuestro almacén en V.M.T. Nosotros contamos todo e ingresamos la mercadería a tu inventario de forma segura.</p>
+    <div class="logi-grid">
+      <div class="steps">
+        <div class="step"><span class="n">1</span><div><h3>Recibimos y almacenamos</h3><p>Tu mercadería entra a nuestro almacén en Villa María del Triunfo y queda lista para despacharse.</p></div></div>
+        <div class="step"><span class="n">2</span><div><h3>Preparamos cada pedido</h3><p>Seleccionamos, empacamos y etiquetamos según los pedidos que nos envíes por WhatsApp o correo.</p></div></div>
+        <div class="step"><span class="n">3</span><div><h3>Asignamos el vehículo</h3><p>Moto, station wagon, minivan o porter según el volumen y el peso de la carga.</p></div></div>
+        <div class="step"><span class="n">4</span><div><h3>Entregamos y reportamos</h3><p>Coordinamos con el cliente final y te enviamos el resultado, incluidos los pedidos no entregados.</p></div></div>
       </div>
-      <div class="paso-card">
-        <span class="n">2</span>
-        <h3>Preparamos y Gestionamos</h3>
-        <p>Cuando vendes, nos avisas. Sacamos el producto del estante, lo empaquetamos con cuidado y lo alistamos para ruta. Si un cliente está ausente o rechaza el pedido, lo retornamos a nuestro Hub y reingresamos el producto a tu stock para su próxima venta de forma ordenada.</p>
-      </div>
-      <div class="paso-card">
-        <span class="n">3</span>
-        <h3>Entregamos el Mismo Día</h3>
-        <p>Nuestro equipo distribuye en todo el Cono Sur con opción de Pago Contra Entrega (Efectivo, Yape o Plin) para dar la máxima confianza a tus compradores.</p>
+      <div class="map">
+        <svg viewBox="0 0 640 400" role="img" aria-label="Mapa de una ruta con cuatro paradas, desde el almacén hasta la última entrega">
+          <path d="M0 60H640M0 130H640M0 200H640M0 270H640M0 340H640M70 0V400M140 0V400M210 0V400M280 0V400M350 0V400M420 0V400M490 0V400M560 0V400" stroke="#2E251E" stroke-width="2" fill="none"></path>
+          <rect x="222" y="132" width="52" height="62" rx="4" fill="#1B1511"></rect>
+          <rect x="352" y="212" width="60" height="50" rx="4" fill="#1B1511"></rect>
+          <rect x="492" y="202" width="60" height="60" rx="4" fill="#1B1511"></rect>
+          <rect x="82" y="72" width="52" height="52" rx="4" fill="#1B1511"></rect>
+          <path d="M60 320 H200 V210 H340 V290 H470 V150 H590 V70" fill="none" stroke="#FF4D1A" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" opacity="0.35"></path>
+          <path class="route-dash" d="M60 320 H200 V210 H340 V290 H470 V150 H590 V70" fill="none" stroke="#FFC21A" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"></path>
+          <rect x="38" y="298" width="44" height="44" rx="8" fill="#FF4D1A" stroke="#0E0B09" stroke-width="3"></rect>
+          <path d="M48 334V318L60 308L72 318V334Z" fill="#0E0B09"></path>
+          <circle cx="200" cy="265" r="16" fill="#FFC21A" stroke="#0E0B09" stroke-width="3"></circle><text x="200" y="271" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="17" fill="#0E0B09">1</text>
+          <circle cx="340" cy="250" r="16" fill="#FFC21A" stroke="#0E0B09" stroke-width="3"></circle><text x="340" y="256" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="17" fill="#0E0B09">2</text>
+          <circle cx="470" cy="220" r="16" fill="#FFC21A" stroke="#0E0B09" stroke-width="3"></circle><text x="470" y="226" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="17" fill="#0E0B09">3</text>
+          <circle cx="590" cy="110" r="16" fill="#FFC21A" stroke="#0E0B09" stroke-width="3"></circle><text x="590" y="116" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="17" fill="#0E0B09">4</text>
+          <text x="60" y="366" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="15" fill="#FFF6E8">Almacén</text>
+          <text x="590" y="42" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="15" fill="#FFF6E8">Última entrega</text>
+          <circle r="11" fill="none" stroke="#FF4D1A" stroke-width="3">
+            <animate attributeName="r" values="11;30" dur="1.4s" repeatCount="indefinite"></animate>
+            <animate attributeName="opacity" values="0.9;0" dur="1.4s" repeatCount="indefinite"></animate>
+            <animateMotion dur="10s" repeatCount="indefinite" path="M60 320 H200 V210 H340 V290 H470 V150 H590 V70"></animateMotion>
+          </circle>
+          <circle r="11" fill="#FF4D1A" stroke="#0E0B09" stroke-width="4">
+            <animateMotion dur="10s" repeatCount="indefinite" path="M60 320 H200 V210 H340 V290 H470 V150 H590 V70"></animateMotion>
+          </circle>
+        </svg>
       </div>
     </div>
   </div>
@@ -481,51 +499,6 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   </div>
 </section>
 
-<!-- LOGÍSTICA INTELIGENTE -->
-<section class="logi" id="logistica">
-  <div class="wrap">
-    <div class="head">
-      <h2 class="h2">Así funciona tu fulfillment, paso a paso</h2>
-      <p class="lead">Desde que tu mercadería entra a nuestro almacén hasta que llega a la puerta del cliente, coordinamos cada etapa.</p>
-    </div>
-    <div class="logi-grid">
-      <div class="steps">
-        <div class="step"><span class="n">1</span><div><h3>Recibimos y almacenamos</h3><p>Tu mercadería entra a nuestro almacén en Villa María del Triunfo y queda lista para despacharse.</p></div></div>
-        <div class="step"><span class="n">2</span><div><h3>Preparamos cada pedido</h3><p>Seleccionamos, empacamos y etiquetamos según los pedidos que nos envíes por WhatsApp o correo.</p></div></div>
-        <div class="step"><span class="n">3</span><div><h3>Asignamos el vehículo</h3><p>Moto, station wagon, minivan o porter según el volumen y el peso de la carga.</p></div></div>
-        <div class="step"><span class="n">4</span><div><h3>Entregamos y reportamos</h3><p>Coordinamos con el cliente final y te enviamos el resultado, incluidos los pedidos no entregados.</p></div></div>
-      </div>
-      <div class="map">
-        <svg viewBox="0 0 640 400" role="img" aria-label="Mapa de una ruta con cuatro paradas, desde el almacén hasta la última entrega">
-          <path d="M0 60H640M0 130H640M0 200H640M0 270H640M0 340H640M70 0V400M140 0V400M210 0V400M280 0V400M350 0V400M420 0V400M490 0V400M560 0V400" stroke="#2E251E" stroke-width="2" fill="none"></path>
-          <rect x="222" y="132" width="52" height="62" rx="4" fill="#1B1511"></rect>
-          <rect x="352" y="212" width="60" height="50" rx="4" fill="#1B1511"></rect>
-          <rect x="492" y="202" width="60" height="60" rx="4" fill="#1B1511"></rect>
-          <rect x="82" y="72" width="52" height="52" rx="4" fill="#1B1511"></rect>
-          <path d="M60 320 H200 V210 H340 V290 H470 V150 H590 V70" fill="none" stroke="#FF4D1A" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" opacity="0.35"></path>
-          <path class="route-dash" d="M60 320 H200 V210 H340 V290 H470 V150 H590 V70" fill="none" stroke="#FFC21A" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"></path>
-          <rect x="38" y="298" width="44" height="44" rx="8" fill="#FF4D1A" stroke="#0E0B09" stroke-width="3"></rect>
-          <path d="M48 334V318L60 308L72 318V334Z" fill="#0E0B09"></path>
-          <circle cx="200" cy="265" r="16" fill="#FFC21A" stroke="#0E0B09" stroke-width="3"></circle><text x="200" y="271" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="17" fill="#0E0B09">1</text>
-          <circle cx="340" cy="250" r="16" fill="#FFC21A" stroke="#0E0B09" stroke-width="3"></circle><text x="340" y="256" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="17" fill="#0E0B09">2</text>
-          <circle cx="470" cy="220" r="16" fill="#FFC21A" stroke="#0E0B09" stroke-width="3"></circle><text x="470" y="226" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="17" fill="#0E0B09">3</text>
-          <circle cx="590" cy="110" r="16" fill="#FFC21A" stroke="#0E0B09" stroke-width="3"></circle><text x="590" y="116" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="17" fill="#0E0B09">4</text>
-          <text x="60" y="366" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="15" fill="#FFF6E8">Almacén</text>
-          <text x="590" y="42" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="15" fill="#FFF6E8">Última entrega</text>
-          <circle r="11" fill="none" stroke="#FF4D1A" stroke-width="3">
-            <animate attributeName="r" values="11;30" dur="1.4s" repeatCount="indefinite"></animate>
-            <animate attributeName="opacity" values="0.9;0" dur="1.4s" repeatCount="indefinite"></animate>
-            <animateMotion dur="10s" repeatCount="indefinite" path="M60 320 H200 V210 H340 V290 H470 V150 H590 V70"></animateMotion>
-          </circle>
-          <circle r="11" fill="#FF4D1A" stroke="#0E0B09" stroke-width="4">
-            <animateMotion dur="10s" repeatCount="indefinite" path="M60 320 H200 V210 H340 V290 H470 V150 H590 V70"></animateMotion>
-          </circle>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- COBERTURA -->
 <section class="cob" id="cobertura">
   <div class="wrap">
@@ -533,6 +506,67 @@ footer small{display:block;font-size:14px;color:var(--muted)}
       <h2 class="h2">Cobertura en Lima Sur</h2>
       <p class="lead">Entregamos en las zonas de Lima Sur donde más se mueve tu negocio. ¿No ves tu zona? Consúltanos.</p>
       <div class="zones"><span>Lima Sur</span></div>
+    </div>
+    <div class="cob-scene">
+      <div class="cob-scene-wrap">
+        <svg viewBox="0 0 400 220" role="img" aria-label="Animación de un repartidor entregando un pedido a un cliente en la puerta de su casa">
+          <defs>
+            <g id="pkgCob">
+              <rect x="-10" y="-10" width="20" height="20" rx="3" fill="#FFC21A" stroke="#0E0B09" stroke-width="2"></rect>
+              <path d="M-10 -1H10M0 -10V10" stroke="#0E0B09" stroke-width="1.4"></path>
+            </g>
+          </defs>
+
+          <!-- piso -->
+          <ellipse cx="200" cy="196" rx="182" ry="8" fill="#000" opacity=".28"></ellipse>
+
+          <!-- casa del cliente -->
+          <g transform="translate(268 46)">
+            <path d="M-8 36 L54 -6 L116 36 Z" fill="#FFC21A"></path>
+            <rect x="0" y="36" width="108" height="92" rx="4" fill="#1B1511" stroke="#FFC21A" stroke-width="3"></rect>
+            <rect x="14" y="54" width="22" height="22" rx="2" fill="#3A2F26" stroke="#4A423B" stroke-width="1.6"></rect>
+            <rect x="80" y="54" width="22" height="22" rx="2" fill="#3A2F26" stroke="#4A423B" stroke-width="1.6"></rect>
+            <rect x="44" y="76" width="28" height="52" rx="2" fill="#0E0B09" stroke="#4A423B" stroke-width="2"></rect>
+            <circle cx="64" cy="104" r="2.4" fill="#FFC21A"></circle>
+          </g>
+
+          <!-- repartidor -->
+          <g transform="translate(64 118)">
+            <ellipse cx="0" cy="66" rx="26" ry="5" fill="#000" opacity=".25"></ellipse>
+            <circle cx="0" cy="-32" r="14" fill="#E7B78C"></circle>
+            <path d="M-15 -41 Q0 -50 15 -41 L15 -36 L-15 -36 Z" fill="#0E0B09"></path>
+            <rect x="-4" y="-42" width="16" height="6" rx="2" fill="#0E0B09"></rect>
+            <rect x="-19" y="-18" width="38" height="50" rx="12" fill="#FF4D1A"></rect>
+            <path d="M-19 -6 L-39 8" stroke="#E7B78C" stroke-width="7" stroke-linecap="round"></path>
+            <rect x="-52" y="-2" width="20" height="26" rx="4" fill="#26201B" stroke="#0E0B09" stroke-width="2"></rect>
+            <path d="M19 -6 L42 4" stroke="#E7B78C" stroke-width="7" stroke-linecap="round"></path>
+            <rect x="36" y="-8" width="26" height="26" rx="3" fill="#FFC21A" stroke="#0E0B09" stroke-width="2"></rect>
+            <path d="M36 5H62M49 -8V18" stroke="#0E0B09" stroke-width="1.6"></path>
+            <rect x="-13" y="30" width="12" height="32" rx="5" fill="#26201B"></rect>
+            <rect x="1" y="30" width="12" height="32" rx="5" fill="#26201B"></rect>
+          </g>
+
+          <!-- cliente -->
+          <g transform="translate(196 132)">
+            <ellipse cx="0" cy="58" rx="26" ry="5" fill="#000" opacity=".25"></ellipse>
+            <circle cx="0" cy="-28" r="14" fill="#C98A5B"></circle>
+            <path d="M-13 -34 Q0 -41 13 -34" fill="none" stroke="#0E0B09" stroke-width="4" stroke-linecap="round"></path>
+            <rect x="-19" y="-14" width="38" height="48" rx="12" fill="#3A6EA5"></rect>
+            <path d="M-19 -2 L-41 -8" stroke="#C98A5B" stroke-width="7" stroke-linecap="round"></path>
+            <path d="M19 -2 L37 12" stroke="#C98A5B" stroke-width="7" stroke-linecap="round"></path>
+            <rect x="-13" y="32" width="12" height="30" rx="5" fill="#26201B"></rect>
+            <rect x="1" y="32" width="12" height="30" rx="5" fill="#26201B"></rect>
+          </g>
+
+          <!-- ruta de entrega del paquete -->
+          <path d="M80 108 Q 140 96 172 116" fill="none" stroke="#3A2F26" stroke-width="2" stroke-dasharray="4 6"></path>
+
+          <use href="#pkgCob" class="cob-pkg-a"></use>
+          <use href="#pkgCob" class="cob-pkg-a" style="animation-delay:-1.6s"></use>
+
+          <text x="200" y="20" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="13" fill="#FFC21A">Entrega directa al cliente</text>
+        </svg>
+      </div>
     </div>
   </div>
   <div class="wrap" style="padding-top:0">
@@ -647,41 +681,6 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   </div>
 </section>
 
-<!-- COTIZAR -->
-<section class="cot" id="cotizar">
-  <div class="wrap">
-    <div class="cot-copy">
-      <h2 class="h2">Cuéntanos qué necesitas almacenar y mover</h2>
-      <p class="lead">Completa el formulario y se abre WhatsApp con tu solicitud lista para enviar. Te respondemos con la cotización de tu fulfillment.</p>
-      <dl class="contact">
-        <div><dt>WhatsApp</dt><dd id="waLabel"></dd></div>
-        <div><dt>RUC</dt><dd>20615861856</dd></div>
-        <div><dt>Correo</dt><dd>[correo@tudominio.pe]</dd></div>
-        <div><dt>Dirección</dt><dd>[dirección de la empresa]</dd></div>
-        <div><dt>Horario de atención</dt><dd>[horario de atención]</dd></div>
-      </dl>
-    </div>
-    <div class="panel">
-      <div class="row2">
-        <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" type="text" autocomplete="name"></div>
-        <div class="field"><label for="f-empresa">Empresa (opcional)</label><input id="f-empresa" type="text" autocomplete="organization"></div>
-      </div>
-      <div class="row2">
-        <div class="field"><label for="f-tel">Teléfono</label><input id="f-tel" type="tel" inputmode="tel" autocomplete="tel"></div>
-        <div class="field"><label for="f-dist">Distrito de recojo</label><input id="f-dist" type="text"></div>
-      </div>
-      <div>
-        <span class="fl" id="fl-veh">Vehículo</span>
-        <div class="chips-f" id="chipsVeh" role="group" aria-labelledby="fl-veh" style="margin-top:8px"></div>
-      </div>
-      <div class="field"><label for="f-det">Detalle (qué necesitas almacenar o enviar)</label><textarea id="f-det" rows="4"></textarea></div>
-      <a class="btn btn-ember" id="waSend" href="#" target="_blank" rel="noopener" style="align-self:flex-start;font-size:18px">
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0E0B09" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M3 21l1.65-4.9A9 9 0 1 1 8 19.5L3 21z"></path><path d="M9 7.6c-.5.5-.7 1.3-.4 2.2.9 2.5 2.7 4.3 5.2 5.3.9.3 1.7.1 2.2-.4l.5-.6c.2-.3.2-.7-.1-.9l-1.5-1c-.3-.2-.6-.1-.9.1l-.4.4c-1.2-.5-2.1-1.4-2.6-2.6l.4-.4c.2-.2.3-.6.1-.9l-1-1.5c-.2-.3-.6-.3-.9-.1z" fill="#0E0B09" stroke="none"></path></svg>
-        <span>Enviar por WhatsApp</span>
-      </a>
-    </div>
-  </div>
-</section>
 
 </main>
 
@@ -802,10 +801,6 @@ footer small{display:block;font-size:14px;color:var(--muted)}
 
   /* ===== WhatsApp (abre la app en el celular) ===== */
   function waUrl(text) { return 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(text); }
-  var waPretty = CONFIG.whatsapp.length === 11 && CONFIG.whatsapp.indexOf('51') === 0
-    ? '+51 ' + CONFIG.whatsapp.slice(2, 5) + ' ' + CONFIG.whatsapp.slice(5, 8) + ' ' + CONFIG.whatsapp.slice(8)
-    : '+' + CONFIG.whatsapp;
-  $('#waLabel').textContent = waPretty;
   var WH_LAT = -12.155044333537433, WH_LNG = -76.95519645839376;
   var mapsEl = document.getElementById('whMaps'), wazeEl = document.getElementById('whWaze');
   if (mapsEl) mapsEl.href = 'https://www.google.com/maps/search/?api=1&query=' + WH_LAT + ',' + WH_LNG;
@@ -890,34 +885,6 @@ footer small{display:block;font-size:14px;color:var(--muted)}
     road.appendChild(d);
   });
 
-  /* ===== Formulario -> WhatsApp ===== */
-  var VEHS = ['Moto', 'Station Wagon', 'Minivan', 'Porter (furgón)', 'Aún no sé'];
-  var vehSel = 'Aún no sé';
-  var chipsEl = $('#chipsVeh');
-  function drawChips() {
-    chipsEl.innerHTML = '';
-    VEHS.forEach(function (v) {
-      var b = document.createElement('button');
-      b.type = 'button'; b.className = 'chip'; b.textContent = v;
-      b.setAttribute('aria-pressed', v === vehSel ? 'true' : 'false');
-      b.addEventListener('click', function () { vehSel = v; drawChips(); updateWa(); });
-      chipsEl.appendChild(b);
-    });
-  }
-  function updateWa() {
-    var v = function (id) { return ($('#' + id).value || '').trim(); };
-    var lines = ['Hola, quiero cotizar un fulfillment con Dos Espartanos.'];
-    if (v('f-nombre')) lines.push('Nombre: ' + v('f-nombre'));
-    if (v('f-empresa')) lines.push('Empresa: ' + v('f-empresa'));
-    if (v('f-tel')) lines.push('Teléfono: ' + v('f-tel'));
-    if (v('f-dist')) lines.push('Recojo en: ' + v('f-dist'));
-    lines.push('Vehículo: ' + vehSel);
-    if (v('f-det')) lines.push('Detalle: ' + v('f-det'));
-    $('#waSend').href = waUrl(lines.join('\n'));
-  }
-  ['f-nombre', 'f-empresa', 'f-tel', 'f-dist', 'f-det'].forEach(function (id) { $('#' + id).addEventListener('input', updateWa); });
-  drawChips(); updateWa();
-
   /* ===== Navegación interna suave (sin usar href, evita el aviso de enlace externo) ===== */
   $$('[data-scroll]').forEach(function (el) {
     el.addEventListener('click', function () {
@@ -941,7 +908,7 @@ footer small{display:block;font-size:14px;color:var(--muted)}
         }
       });
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-    ['inicio', 'servicios', 'tarifas', 'cobertura', 'cotizar'].forEach(function (id) {
+    ['inicio', 'logistica', 'tarifas', 'servicios', 'cobertura', 'seguridad'].forEach(function (id) {
       var sec = document.getElementById(id);
       if (sec) tabObserver.observe(sec);
     });
