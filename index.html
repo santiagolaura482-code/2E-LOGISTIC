@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dos Espartanos Operador Logístico — Última milla en moto, station wagon, minivan y porter</title>
-<meta name="description" content="Transporte de última milla en moto, station wagon, minivan y porter. Recojo y entrega puerta a puerta. Cotiza por WhatsApp y sigue tu pedido en tiempo real.">
+<title>Dos Espartanos Operador Logístico — Fulfillment y última milla en Lima y Callao</title>
+<meta name="description" content="Servicio de fulfillment: almacenamos tu mercadería, preparamos tus pedidos y los entregamos puerta a puerta en moto, station wagon, minivan y porter. Cotiza por WhatsApp y sigue tu pedido en tiempo real.">
 <meta name="theme-color" content="#0E0B09">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap">
@@ -95,22 +95,14 @@ h1{font-family:var(--bsd);font-weight:900;font-size:clamp(52px,8vw,120px);line-h
 .tile.white{background:#fff;color:var(--ink)}.tile.white p{color:#3A3026}
 .tile.orange{background:var(--ember);color:var(--ink)}.tile.orange p{color:#1F0F06}
 
-/* ---------- Flota ---------- */
-.flota .lead{color:var(--sand)}
-.tabs{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px}
-.tab{min-height:52px;padding:0 26px;font-weight:700;font-size:18px;border-radius:999px;border:2px solid #6B5D4E;background:transparent;color:var(--bone);cursor:pointer}
-.tab[aria-pressed="true"]{background:var(--gold);color:var(--ink);border-color:var(--gold)}
-.fleet-grid{display:flex;flex-wrap:wrap;gap:32px;align-items:stretch}
-.scene{flex:1 1 520px;min-width:0;position:relative;overflow:hidden;height:340px;background:var(--asphalt);border:4px solid var(--gold);border-radius:16px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:36px}
-.scene .roadline{bottom:14px}
-.scene .veh{width:min(440px,92%);height:auto;display:block}
-.arrive{animation:drivein 1.6s cubic-bezier(.16,.8,.3,1) both;width:100%;display:flex;justify-content:center}
-.idle{animation:idle 1.3s ease-in-out 1.6s infinite;width:100%;display:flex;justify-content:center}
-.fleet-info{flex:1 1 320px;display:flex;flex-direction:column;justify-content:center;gap:18px;min-width:0}
-.fleet-info h3{font-family:var(--bsd);font-weight:900;font-size:64px;line-height:.95;color:var(--gold)}
-.fleet-info p{font-size:19px;line-height:1.55;max-width:440px}
-.fleet-info .ideal{font-size:17px;color:var(--sand)}
-.fleet-info .cap{font-size:15px;color:var(--muted)}
+/* ---------- Beneficios ---------- */
+.benef{background:var(--asphalt);color:var(--bone)}
+.benef .lead{color:var(--sand)}
+.benef-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.benef-item{display:flex;flex-direction:column;gap:10px}
+.benef-item svg{width:36px;height:36px}
+.benef-item h3{font-size:19px;font-weight:700;line-height:1.25}
+.benef-item p{font-size:15px;line-height:1.55;color:var(--sand)}
 
 /* ---------- Logística ---------- */
 .logi{background:var(--cream);color:var(--ink)}
@@ -127,20 +119,24 @@ h1{font-family:var(--bsd);font-weight:900;font-size:clamp(52px,8vw,120px);line-h
 
 /* ---------- Cobertura ---------- */
 .cob{background:var(--ember);color:var(--ink)}
-.wh-card{margin-top:40px;background:var(--ink);color:var(--bone);border:3px solid var(--gold);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:28px}
-.wh-top{display:flex;flex-wrap:wrap;align-items:center;gap:24px}
-.wh-ico{flex:none;width:64px;height:64px;border-radius:50%;background:var(--gold);display:grid;place-items:center}
-.wh-txt{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:6px}
-.wh-txt h3{font-family:var(--bsd);font-weight:900;font-size:28px;line-height:1.1}
-.wh-txt p{font-size:16px;line-height:1.55;color:var(--sand);max-width:520px}
-.wh-coords{font-size:14px;color:var(--muted) !important}
-.wh-addr{font-size:17px;font-weight:700;color:var(--gold) !important}
-.wh-links{flex:none;display:flex;flex-wrap:wrap;gap:10px}
-.wh-links .btn{min-height:46px;font-size:15px;padding:0 18px}
-@media (max-width:640px){.wh-card{padding:22px}.wh-links .btn{flex:1 1 100%}}
+.wh-card{margin-top:40px;background:var(--ink);color:var(--bone);border:3px solid var(--gold);border-radius:16px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.wh-top{display:flex;flex-direction:column;gap:14px;min-width:0}
+.wh-top-head{display:flex;align-items:center;gap:16px}
+.wh-ico{flex:none;width:52px;height:52px;border-radius:50%;background:var(--gold);display:grid;place-items:center}
+.wh-ico svg{width:30px;height:30px}
+.wh-txt{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:5px}
+.wh-txt h3{font-family:var(--bsd);font-weight:900;font-size:21px;line-height:1.12}
+.wh-top>p{font-size:14.5px;line-height:1.5;color:var(--sand);margin:0}
+.wh-coords{font-size:12.5px;color:var(--muted) !important}
+.wh-addr{font-size:15px;font-weight:700;color:var(--gold) !important}
+.wh-links{flex:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.wh-links .btn{min-height:44px;font-size:14px;padding:0 16px;flex:1 1 0}
+@media (max-width:900px){.wh-card{grid-template-columns:1fr}}
+@media (max-width:640px){.wh-card{padding:20px;gap:20px}.wh-links .btn{flex:1 1 100%}}
 
-.wh-scene-wrap{background:#080605;border-radius:12px;padding:20px;border-top:1px solid #3A2F26}
-.wh-scene-h{font-family:var(--bsd);font-weight:900;font-size:24px;line-height:1;color:var(--bone);margin:0 0 12px 4px}
+.wh-scene-wrap{background:#080605;border-radius:12px;padding:16px;display:flex;flex-direction:column}
+.wh-scene-h{font-family:var(--bsd);font-weight:900;font-size:18px;line-height:1.15;color:var(--bone);margin:0 0 10px 2px}
+.wh-scene{margin-top:auto;margin-bottom:auto}
 .wh-scene svg{width:100%;height:auto;display:block}
 .wh-dash-in{stroke-dasharray:14 10;animation:dashIn .9s linear infinite}
 .wh-dash-out{stroke-dasharray:10 8;animation:dashOut .8s linear infinite}
@@ -162,6 +158,7 @@ h1{font-family:var(--bsd);font-weight:900;font-size:clamp(52px,8vw,120px);line-h
 .cob .lead{color:#1F0F06;max-width:480px}
 .zones{flex:1 1 420px;display:flex;flex-wrap:wrap;gap:14px}
 .zones span{background:var(--ink);color:var(--bone);padding:16px 28px;border-radius:999px;font-size:20px;font-weight:700}
+.cob .txt .zones{flex:none;align-self:flex-start;margin-top:4px}
 
 /* ---------- Seguimiento (sección) ---------- */
 .trk-sec .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:56px}
@@ -296,6 +293,7 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   .nav .link,.nav .btn-outline{display:none}
   .burger{display:inline-flex}
   .tile,.t7,.t5{grid-column:span 12}
+  .benef-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:640px){
   :root{--pad:20px}
@@ -312,11 +310,7 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   .drive .veh{width:calc(var(--w) * .68)}
   .drive-1,.drive-3,.drive-5{bottom:10px}.drive-2,.drive-4{bottom:30px}
   .tile{padding:24px}.tile h3{font-size:34px}
-  .tab{min-height:46px;padding:0 18px;font-size:16px}
-  .scene{height:250px;padding-bottom:28px;flex-basis:100%}
-  .fleet-info h3{font-size:46px}
-  .fleet-info p{font-size:17px}
-  .fleet-info .btn{width:100%}
+  .benef-grid{grid-template-columns:1fr;gap:22px}
   .step .n{width:42px;height:42px;font-size:24px}
   .zones span{font-size:17px;padding:12px 20px}
   .panel{padding:22px}
@@ -346,8 +340,8 @@ footer small{display:block;font-size:14px;color:var(--muted)}
       <span><b>Dos Espartanos</b><small>Operador Logístico E.I.R.L.</small></span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a class="link" href="#servicios">Servicios</a>
-      <a class="link" href="#flota">Flota</a>
+      <a class="link" href="#servicios">Fulfillment</a>
+      <a class="link" href="#beneficios">Beneficios</a>
       <a class="link" href="#logistica">Logística</a>
       <a class="link" href="#cobertura">Cobertura</a>
       <button type="button" class="btn btn-outline" data-open-track>Seguir pedido</button>
@@ -358,8 +352,8 @@ footer small{display:block;font-size:14px;color:var(--muted)}
     </nav>
   </div>
   <div class="mmenu" id="mmenu">
-    <a class="link" href="#servicios">Servicios</a>
-    <a class="link" href="#flota">Flota</a>
+    <a class="link" href="#servicios">Fulfillment</a>
+    <a class="link" href="#beneficios">Beneficios</a>
     <a class="link" href="#logistica">Logística</a>
     <a class="link" href="#cobertura">Cobertura</a>
     <button type="button" class="btn btn-outline" data-open-track>Seguir mi pedido</button>
@@ -372,14 +366,14 @@ footer small{display:block;font-size:14px;color:var(--muted)}
 <section class="hero" id="inicio">
   <div class="wrap">
     <div class="hero-copy">
-      <h1>Última milla que no retrocede.</h1>
-      <p class="sub">Recogemos y entregamos tus pedidos puerta a puerta en moto, station wagon, minivan y porter. Tú vendes; nosotros llegamos.</p>
+      <h1>Guardamos, preparamos y entregamos. Tú solo vendes.</h1>
+      <p class="sub">Fulfillment completo para tu negocio: almacenamos tu mercadería, armamos cada pedido y lo entregamos puerta a puerta en moto, station wagon, minivan o porter.</p>
       <div class="hero-cta">
-        <a class="btn btn-ember" href="#cotizar" style="font-size:18px">Cotizar mi envío</a>
-        <a class="btn btn-outline" href="#flota" style="font-size:18px">Ver la flota en acción</a>
+        <a class="btn btn-ember" href="#cotizar" style="font-size:18px">Cotizar mi fulfillment</a>
+        <a class="btn btn-outline" href="#logistica" style="font-size:18px">Cómo funciona</a>
       </div>
       <button type="button" class="hero-track" data-open-track><span class="live"></span>Ya tengo un pedido: seguirlo en tiempo real</button>
-      <div class="chips"><span>Puerta a puerta</span><span>Rutas por zonas</span><span>Reporte de entregas</span></div>
+      <div class="chips"><span>Almacenamiento</span><span>Picking &amp; packing</span><span>Última milla</span><span>Reporte de entregas</span></div>
     </div>
     <div class="hero-art">
       <img data-logo alt="Escudo de Dos Espartanos Logistic: dos guerreros espartanos con lanza, espada y escudos" width="560" height="560">
@@ -394,50 +388,61 @@ footer small{display:block;font-size:14px;color:var(--muted)}
 <section class="servicios" id="servicios">
   <div class="wrap">
     <div class="head">
-      <h2 class="h2">Del almacén a la puerta de tu cliente</h2>
-      <p class="lead">Cubrimos el último tramo de tu operación para que tu equipo se concentre en vender y preparar pedidos.</p>
+      <h2 class="h2">Un solo servicio, de tu inventario a la puerta de tu cliente</h2>
+      <p class="lead">Fulfillment significa que nosotros hacemos el trabajo operativo — guardar, preparar y entregar — para que tu equipo se dedique a vender.</p>
     </div>
     <div class="tiles">
       <div class="tile dark t7">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#FFC21A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4z"></path><path d="M10 20v-6h4v6"></path></svg>
-        <h3>Entrega a domicilio</h3>
-        <p>Pedidos de tiendas online y negocios entregados directamente al cliente final, con confirmación de cada entrega.</p>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#FFC21A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4z"></path><path d="M9 20v-7h6v7"></path></svg>
+        <h3>Almacenamiento</h3>
+        <p>Guarda tu stock en nuestro local, listo para despacharse, sin que tengas que alquilar ni administrar tu propio almacén.</p>
       </div>
       <div class="tile white t5">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#FF4D1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="6" r="2"></circle><path d="M8 18h6a3 3 0 0 0 0-6h-4a3 3 0 0 1 0-6h6"></path></svg>
-        <h3>Distribución por rutas</h3>
-        <p>Rutas armadas por zona para entregar más pedidos por salida y mantener ordenada tu operación diaria.</p>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#FF4D1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7L12 3 4 7m16 0-8 4m8-4v10l-8 4M4 7l8 4m-8-4v10l8 4m0-10v10"></path></svg>
+        <h3>Picking &amp; packing</h3>
+        <p>Recibimos tu pedido, seleccionamos cada producto de tu inventario y lo empacamos listo para salir a ruta.</p>
       </div>
       <div class="tile orange t5">
         <svg viewBox="0 0 24 24" fill="none" stroke="#0E0B09" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
-        <h3>Entrega el mismo día</h3>
-        <p>Para envíos urgentes dentro de la ciudad, coordinados con anticipación según tu horario de corte.</p>
+        <h3>Última milla el mismo día</h3>
+        <p>Entregamos puerta a puerta en moto, station wagon, minivan o porter, coordinado según tu horario de corte.</p>
       </div>
       <div class="tile dark t7">
         <svg viewBox="0 0 24 24" fill="none" stroke="#FFC21A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14L4 9l5-5"></path><path d="M4 9h10a6 6 0 0 1 0 12h-3"></path></svg>
-        <h3>Recojo y devoluciones</h3>
-        <p>Recogemos en tu almacén o tienda y gestionamos el retorno de pedidos rechazados o no entregados.</p>
+        <h3>Devoluciones e inventario</h3>
+        <p>Recibimos los pedidos rechazados o no entregados y los regresamos a tu stock en el almacén.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FLOTA -->
-<section class="flota" id="flota">
+<!-- BENEFICIOS -->
+<section class="benef" id="beneficios">
   <div class="wrap">
     <div class="head">
-      <h2 class="h2">Cuatro vehículos, según lo que envíes</h2>
-      <p class="lead">Elige un vehículo y míralo llegar. Asignamos el que mejor se ajusta al volumen y al tipo de carga de cada ruta.</p>
+      <h2 class="h2">Por qué tercerizar tu logística</h2>
+      <p class="lead">Cada etapa que nosotros operamos es una que tú dejas de resolver por tu cuenta.</p>
     </div>
-    <div class="tabs" id="tabs" role="group" aria-label="Elegir vehículo"></div>
-    <div class="fleet-grid">
-      <div class="scene" id="scene"><div class="roadline"></div><div id="sceneVeh" style="width:100%;display:flex;justify-content:center"></div></div>
-      <div class="fleet-info">
-        <h3 id="fName"></h3>
-        <p id="fDesc"></p>
-        <p class="ideal"><strong style="color:var(--bone)">Ideal para:</strong> <span id="fIdeal"></span></p>
-        <p class="cap">Capacidad de carga: [completar kg y volumen]</p>
-        <a class="btn btn-ember" href="#cotizar" id="fCta" style="align-self:flex-start">Cotizar con este vehículo</a>
+    <div class="benef-grid">
+      <div class="benef-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#FFC21A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"></path></svg>
+        <h3>Sin alquilar tu propio almacén</h3>
+        <p>Guardas tu mercadería en nuestro local y liberas ese capital para tu negocio.</p>
+      </div>
+      <div class="benef-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#FFC21A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <h3>Sin armar un equipo de despacho</h3>
+        <p>Nosotros seleccionamos, empacamos y despachamos cada pedido por ti.</p>
+      </div>
+      <div class="benef-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#FFC21A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4z"></path><path d="M9 20v-7h6v7"></path><path d="M12 3v5"></path></svg>
+        <h3>Escala sin logística propia</h3>
+        <p>Ya sea una caja o cien, usamos el vehículo correcto para cada volumen.</p>
+      </div>
+      <div class="benef-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#FFC21A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+        <h3>Tus clientes siguen su pedido</h3>
+        <p>Un código de seguimiento en tiempo real que da confianza a quien te compra.</p>
       </div>
     </div>
   </div>
@@ -447,13 +452,13 @@ footer small{display:block;font-size:14px;color:var(--muted)}
 <section class="logi" id="logistica">
   <div class="wrap">
     <div class="head">
-      <h2 class="h2">Logística inteligente en cada ruta</h2>
-      <p class="lead">Planificamos antes de salir para que cada kilómetro cuente: paradas ordenadas, vehículo correcto y resultados a la vista.</p>
+      <h2 class="h2">Así funciona tu fulfillment, paso a paso</h2>
+      <p class="lead">Desde que tu mercadería entra a nuestro almacén hasta que llega a la puerta del cliente, coordinamos cada etapa.</p>
     </div>
     <div class="logi-grid">
       <div class="steps">
-        <div class="step"><span class="n">1</span><div><h3>Recibimos tus pedidos</h3><p>Direcciones y horarios de entrega por WhatsApp o correo.</p></div></div>
-        <div class="step"><span class="n">2</span><div><h3>Optimizamos la ruta</h3><p>Agrupamos por zona y ordenamos las paradas para reducir kilómetros y tiempos.</p></div></div>
+        <div class="step"><span class="n">1</span><div><h3>Recibimos y almacenamos</h3><p>Tu mercadería entra a nuestro almacén en Villa María del Triunfo y queda lista para despacharse.</p></div></div>
+        <div class="step"><span class="n">2</span><div><h3>Preparamos cada pedido</h3><p>Seleccionamos, empacamos y etiquetamos según los pedidos que nos envíes por WhatsApp o correo.</p></div></div>
         <div class="step"><span class="n">3</span><div><h3>Asignamos el vehículo</h3><p>Moto, station wagon, minivan o porter según el volumen y el peso de la carga.</p></div></div>
         <div class="step"><span class="n">4</span><div><h3>Entregamos y reportamos</h3><p>Coordinamos con el cliente final y te enviamos el resultado, incluidos los pedidos no entregados.</p></div></div>
       </div>
@@ -492,25 +497,27 @@ footer small{display:block;font-size:14px;color:var(--muted)}
 <section class="cob" id="cobertura">
   <div class="wrap">
     <div class="txt">
-      <h2 class="h2">Cobertura en Lima Metropolitana y Callao</h2>
-      <p class="lead">Entregamos en las zonas de la ciudad donde más se mueve tu negocio. ¿No ves tu zona? Consúltanos.</p>
+      <h2 class="h2">Cobertura en Lima Sur</h2>
+      <p class="lead">Entregamos en las zonas de Lima Sur donde más se mueve tu negocio. ¿No ves tu zona? Consúltanos.</p>
+      <div class="zones"><span>Lima Sur</span></div>
     </div>
-    <div class="zones"><span>Lima Centro</span><span>Lima Norte</span><span>Lima Sur</span><span>Lima Este</span><span>Callao</span></div>
   </div>
   <div class="wrap" style="padding-top:0">
     <div class="wh-card">
       <div class="wh-top">
-        <div class="wh-ico">
-          <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#0E0B09" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4z"></path><path d="M9 20v-7h6v7"></path></svg>
+        <div class="wh-top-head">
+          <div class="wh-ico">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#0E0B09" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4z"></path><path d="M9 20v-7h6v7"></path></svg>
+          </div>
+          <div class="wh-txt">
+            <h3>Guarda tu inventario en nuestro almacén de Villa María del Triunfo</h3>
+            <p class="wh-addr">San Gabriel Bajo</p>
+          </div>
         </div>
-        <div class="wh-txt">
-          <h3>Distribuimos desde nuestro local en Villa María del Triunfo</h3>
-          <p class="wh-addr">San Gabriel Bajo</p>
-          <p>Todas las rutas de recojo y entrega parten de nuestro almacén, desde donde despachamos hacia toda nuestra zona de cobertura.</p>
-          <p class="wh-coords">Coordenadas: -12.155044333537433, -76.95519645839376</p>
-        </div>
+        <p>Ahí recibimos y almacenamos tu mercadería, preparamos cada pedido y despachamos hacia toda nuestra zona de cobertura.</p>
+        <p class="wh-coords">Coordenadas: -12.155044333537433, -76.95519645839376</p>
         <div class="wh-links">
-          <a class="btn btn-dark" id="whMaps" href="#" target="_blank" rel="noopener">Ver en Google Maps</a>
+          <a class="btn btn-ember" id="whMaps" href="#" target="_blank" rel="noopener">Ver en Google Maps</a>
           <a class="btn btn-outline" id="whWaze" href="#" target="_blank" rel="noopener">Abrir en Waze</a>
         </div>
       </div>
@@ -606,8 +613,8 @@ footer small{display:block;font-size:14px;color:var(--muted)}
 <section class="cot" id="cotizar">
   <div class="wrap">
     <div class="cot-copy">
-      <h2 class="h2">Cuéntanos qué necesitas mover</h2>
-      <p class="lead">Completa el formulario y se abre WhatsApp con tu solicitud lista para enviar. Te respondemos con la cotización.</p>
+      <h2 class="h2">Cuéntanos qué necesitas almacenar y mover</h2>
+      <p class="lead">Completa el formulario y se abre WhatsApp con tu solicitud lista para enviar. Te respondemos con la cotización de tu fulfillment.</p>
       <dl class="contact">
         <div><dt>WhatsApp</dt><dd id="waLabel"></dd></div>
         <div><dt>RUC</dt><dd>20615861856</dd></div>
@@ -629,7 +636,7 @@ footer small{display:block;font-size:14px;color:var(--muted)}
         <span class="fl" id="fl-veh">Vehículo</span>
         <div class="chips-f" id="chipsVeh" role="group" aria-labelledby="fl-veh" style="margin-top:8px"></div>
       </div>
-      <div class="field"><label for="f-det">Detalle del envío</label><textarea id="f-det" rows="4"></textarea></div>
+      <div class="field"><label for="f-det">Detalle (qué necesitas almacenar o enviar)</label><textarea id="f-det" rows="4"></textarea></div>
       <a class="btn btn-ember" id="waSend" href="#" target="_blank" rel="noopener" style="align-self:flex-start;font-size:18px">
         <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0E0B09" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M3 21l1.65-4.9A9 9 0 1 1 8 19.5L3 21z"></path><path d="M9 7.6c-.5.5-.7 1.3-.4 2.2.9 2.5 2.7 4.3 5.2 5.3.9.3 1.7.1 2.2-.4l.5-.6c.2-.3.2-.7-.1-.9l-1.5-1c-.3-.2-.6-.1-.9.1l-.4.4c-1.2-.5-2.1-1.4-2.6-2.6l.4-.4c.2-.2.3-.6.1-.9l-1-1.5c-.2-.3-.6-.3-.9-.1z" fill="#0E0B09" stroke="none"></path></svg>
         <span>Enviar por WhatsApp</span>
@@ -789,8 +796,8 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   if (mapsEl) mapsEl.href = 'https://www.google.com/maps/search/?api=1&query=' + WH_LAT + ',' + WH_LNG;
   if (wazeEl) wazeEl.href = 'https://waze.com/ul?ll=' + WH_LAT + ',' + WH_LNG + '&navigate=yes';
 
-  $('#fab').href = waUrl('Hola, quisiera información sobre el servicio de última milla de Dos Espartanos.');
-  $('#trkNoCode').href = waUrl('Hola, quiero cotizar un envío con Dos Espartanos.');
+  $('#fab').href = waUrl('Hola, quisiera información sobre el servicio de fulfillment de Dos Espartanos.');
+  $('#trkNoCode').href = waUrl('Hola, quiero cotizar un fulfillment con Dos Espartanos.');
 
   /* ===== Vehículos (dibujo vectorial) ===== */
   var K = { ink: '#0E0B09', gold: '#FFC21A', ember: '#FF4D1A', bone: '#FFF6E8', glass: '#26323B', hub: '#4A423B', rim: '#D9D2C7' };
@@ -867,32 +874,6 @@ footer small{display:block;font-size:14px;color:var(--muted)}
     road.appendChild(d);
   });
 
-  /* ===== Flota interactiva ===== */
-  var FLEET = [
-    { id: 'moto', nombre: 'Moto', desc: 'La opción más rápida en zonas de tráfico intenso y calles angostas.', ideal: 'paquetes pequeños, documentos y entregas urgentes.', o: { a: K.ember, b: K.gold, h: K.gold, c: 'spin-arrive' } },
-    { id: 'wagon', nombre: 'Station Wagon', desc: 'Ágil en el tráfico y fácil de estacionar, con más espacio que una moto.', ideal: 'paquetería pequeña y mediana, documentos y pedidos de e-commerce.', o: { c: 'spin-arrive' } },
-    { id: 'minivan', nombre: 'Minivan', desc: 'Más volumen que un station wagon con la misma facilidad para moverse en la ciudad.', ideal: 'cajas medianas y varios pedidos por ruta.', o: { c: 'spin-arrive' } },
-    { id: 'porter', nombre: 'Porter (furgón)', desc: 'Furgón cerrado para carga voluminoso que necesita viajar protegida.'.replace('voluminoso', 'voluminosa'), ideal: 'cajas grandes, mercadería y reparto a comercios.', o: { c: 'spin-arrive' } }
-  ];
-  var fleetSel = 0;
-  var tabsEl = $('#tabs');
-  FLEET.forEach(function (f, i) {
-    var b = document.createElement('button');
-    b.type = 'button'; b.className = 'tab'; b.textContent = f.nombre;
-    b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
-    b.addEventListener('click', function () { fleetSel = i; showFleet(true); });
-    tabsEl.appendChild(b);
-  });
-  function showFleet(animate) {
-    var f = FLEET[fleetSel];
-    $$('.tab', tabsEl).forEach(function (b, i) { b.setAttribute('aria-pressed', i === fleetSel ? 'true' : 'false'); });
-    $('#fName').textContent = f.nombre;
-    $('#fDesc').textContent = f.desc;
-    $('#fIdeal').textContent = f.ideal;
-    $('#sceneVeh').innerHTML = '<div class="arrive"><div class="idle">' + vehSVG(f.id, f.o) + '</div></div>';
-  }
-  showFleet(false);
-
   /* ===== Formulario -> WhatsApp ===== */
   var VEHS = ['Moto', 'Station Wagon', 'Minivan', 'Porter (furgón)', 'Aún no sé'];
   var vehSel = 'Aún no sé';
@@ -909,7 +890,7 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   }
   function updateWa() {
     var v = function (id) { return ($('#' + id).value || '').trim(); };
-    var lines = ['Hola, quiero cotizar un envío de última milla con Dos Espartanos.'];
+    var lines = ['Hola, quiero cotizar un fulfillment con Dos Espartanos.'];
     if (v('f-nombre')) lines.push('Nombre: ' + v('f-nombre'));
     if (v('f-empresa')) lines.push('Empresa: ' + v('f-empresa'));
     if (v('f-tel')) lines.push('Teléfono: ' + v('f-tel'));
@@ -919,7 +900,6 @@ footer small{display:block;font-size:14px;color:var(--muted)}
     $('#waSend').href = waUrl(lines.join('\n'));
   }
   ['f-nombre', 'f-empresa', 'f-tel', 'f-dist', 'f-det'].forEach(function (id) { $('#' + id).addEventListener('input', updateWa); });
-  $('#fCta').addEventListener('click', function () { vehSel = FLEET[fleetSel].nombre; drawChips(); updateWa(); });
   drawChips(); updateWa();
 
   /* ===== Menú móvil ===== */
