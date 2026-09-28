@@ -61,6 +61,7 @@ button{font-family:inherit}
 .hero{color:var(--ink);background-color:#F4F2ED;background-repeat:no-repeat,no-repeat;background-position:left top,right center;background-size:100% 100%,cover;background-image:linear-gradient(100deg, rgba(244,242,237,.98) 0%, rgba(244,242,237,.94) 32%, rgba(244,242,237,.6) 55%, rgba(244,242,237,.05) 80%), var(--hero-photo, none)}
 .hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:32px;padding-top:36px;padding-bottom:40px;min-height:460px}
 .hero-copy{flex:1 1 480px;max-width:560px;display:flex;flex-direction:column;gap:20px;min-width:0}
+.hero-mobile-img{display:none}
 h1{font-family:var(--bsd);font-weight:900;font-size:clamp(42px,6.4vw,92px);line-height:.94}
 .hero-copy .sub{font-size:18px;line-height:1.5;color:#3A3026;max-width:540px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px}
@@ -265,6 +266,11 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   .panel .btn{width:100%}
   .fab{width:58px;height:58px}
 }
+@media (max-width:767px){
+  .hero{background-image:none;background-color:#fff}
+  .hero .wrap{padding-bottom:40px}
+  .hero-mobile-img{display:block;width:100%;height:auto;margin-top:20px}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;scroll-behavior:auto !important}
   .drive-1{left:4%}.drive-2{left:24%}.drive-3{left:46%}.drive-4{left:68%}.drive-5{left:86%}
@@ -310,6 +316,7 @@ footer small{display:block;font-size:14px;color:var(--muted)}
         <a class="btn btn-ember" id="heroCta" style="font-size:18px" href="#" target="_blank" rel="noopener">¡QUIERO MI SEMANA DE PRUEBA GRATIS!</a>
         <button type="button" class="btn btn-outline" style="font-size:18px" data-scroll="logistica">Cómo funciona</button>
       </div>
+      <img id="heroMobileImg" class="hero-mobile-img" alt="Mapa de cobertura de Dos Espartanos en Lima Sur (Villa María del Triunfo, San Juan de Miraflores, Villa El Salvador, Chorrillos y Lurín) junto al escudo de 2E Logistic">
     </div>
   </div>
 </section>
@@ -642,6 +649,8 @@ footer small{display:block;font-size:14px;color:var(--muted)}
   $$('img[data-logo]').forEach(function (i) { i.src = LOGO; });
   var heroSectionEl = document.getElementById('inicio');
   if (heroSectionEl) heroSectionEl.style.setProperty('--hero-photo', 'url(' + HERO_BG + ')');
+  var heroMobileImgEl = document.getElementById('heroMobileImg');
+  if (heroMobileImgEl) heroMobileImgEl.src = HERO_BG;
 
   /* ===== WhatsApp (abre la app en el celular) ===== */
   function waUrl(text) { return 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(text); }
